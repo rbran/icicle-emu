@@ -1,0 +1,18 @@
+[package]
+name = "icicle-disasm"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+pcode = { path = "../sleigh/pcode" }
+sleigh-runtime = { path = "../sleigh/sleigh-runtime" }
+sleigh-compile = { path = "../sleigh/sleigh-compile" }
+sleigh-parse = { path = "../sleigh/sleigh-parse" }
+
+serde-xml-rs = "0.6.0"
+serde = { version = "1.0.162", features = ["derive"] }
+embeddir = "0.1.1"
+once_cell = "1.18.0"
+
