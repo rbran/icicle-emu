@@ -303,6 +303,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7a81dae078cea95a014a339291cec439d2f232ebe854a9d672b796c6afafa9b7"
 
 [[package]]
+name = "embeddir"
+version = "0.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "cc6ca55ed1fc3526b83dd81678f1416d7b7ef5ff95439e759f1ed4bfea887e3b"
+dependencies = [
+ "quote",
+ "syn 1.0.109",
+]
+
+[[package]]
 name = "fallible-iterator"
 version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -411,6 +421,20 @@ dependencies = [
  "sleigh-runtime",
  "target-lexicon",
  "tracing",
+]
+
+[[package]]
+name = "icicle-disasm"
+version = "0.1.0"
+dependencies = [
+ "embeddir",
+ "once_cell",
+ "pcode",
+ "serde",
+ "serde-xml-rs",
+ "sleigh-compile",
+ "sleigh-parse",
+ "sleigh-runtime",
 ]
 
 [[package]]
@@ -653,9 +677,9 @@ dependencies = [
 
 [[package]]
 name = "once_cell"
-version = "1.17.1"
+version = "1.18.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b7e5500299e16ebb147ae15a00a942af264cf3688f47923b8fc2cd5858f23ad3"
+checksum = "dd8b5dd2ae5ed71462c540258bedcb51965123ad7e7ccf4b9a8cafaa4a63576d"
 
 [[package]]
 name = "overload"
